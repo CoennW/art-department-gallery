@@ -1,39 +1,41 @@
 <!doctype html>
 
-<html lang="en">
+    <html lang="en">
 
-<head>
-    <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-    <title>Upload your art</title>
-    <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
-
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+        <title>Upload your art</title>
+        <meta name="description" content="THEARTDEPARTMENT">
+        <meta name="author" content="SitePoint">
 
 
 
-</head>
-
-<body>
 
 
-    <html>
+    </head>
 
     <body>
 
-        <form action="dp_upload.php" method="post">
-            Name: <input type="text" name="name"><br> 
-            E-mail: <input type="text" name="email"><br> 
-            Your art: <input type="file" name="art">
-            <input type="submit">
-        </form>
+
+        <html>
+
+        <body>
+
+            <form  action="db_upload.php" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="MAX_FILE_SIZE" value="10000000" /> 
+                Artist: <input type="text" name="artist" /> <br>
+                Instagram: <input type="text" name="instagram"> <br>  
+                Art file: <input type="file" name="pictures" accept="image/*" /> <br>
+                Art name: <input type="text" name="name_artwork"> <br> 
+                
+                <input type="submit" value="upload" />
+            </form>
+
+        </body>
+
+        </html>
 
     </body>
 
     </html>
-
-
-</body>
-
-</html>
