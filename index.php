@@ -22,7 +22,7 @@
 
     <body>
 
-        <form action="upload.php" method="post">
+        <form action="dp_upload.php" method="post">
             Name: <input type="text" name="name"><br> 
             E-mail: <input type="text" name="email"><br> 
             Your art: <input type="file" name="art">
