@@ -29,7 +29,7 @@ $image = new Bulletproof\Image($_FILES);
 
 $image->setLocation("uploads")
       ->setName($_POST['name_artwork'])
-      ->setMime(array('jpeg', 'jpg'));
+      ->setMime(array('jpeg', 'jpg', 'png'));
 
 if($image["pictures"]){
   $upload = $image->upload(); 
