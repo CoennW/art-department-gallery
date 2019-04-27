@@ -27,7 +27,7 @@ require_once  "bulletproof.php";
 
 $image = new Bulletproof\Image($_FILES);
 
-$image->setLocation("uploads")
+$image->setLocation("../uploads")
       ->setName($_POST['name_artwork'])
       ->setMime(array('jpeg', 'jpg', 'png'));
 
