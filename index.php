@@ -22,7 +22,7 @@
 
         <body>
 
-            <form  action="db_upload.php" method="POST" enctype="multipart/form-data">
+            <form  action="php/db_upload.php" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="MAX_FILE_SIZE" value="10000000" /> 
                 Artist: <input type="text" name="artist" /> <br>
                 Instagram: <input type="text" name="instagram"> <br>  

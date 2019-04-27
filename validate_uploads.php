@@ -1,10 +1,10 @@
 <?php
 
-include 'db_connect.php';
+include 'php/db_connect.php';
 
 
 
-$sql = "SELECT id, artist, name_artwork, instagram, path FROM uploaded_art";
+$sql = "SELECT id, artist, name_artwork, instagram, path, validation FROM uploaded_art";
 
 $result = mysqli_query($conn, $sql);
 
@@ -36,15 +36,11 @@ $result = mysqli_query($conn, $sql);
 
 <body>
 
-  <p>ID: <span id="txtHint"></span></p>
+  <p>Server response: <span id="txtHint"></span></p>
 
 
 
   <?php
-
-  $value = 'delete';
-
-
 
   if (mysqli_num_rows($result) > 0)
 
@@ -61,6 +57,8 @@ $result = mysqli_query($conn, $sql);
             <th>Art piece</th>
 
             <th>Yes/No</th>
+            
+            <th>Validation</th>
 
             </tr>';
 
@@ -82,13 +80,15 @@ $result = mysqli_query($conn, $sql);
 
           <td><img src="' . $row['path'] . '" height="30%"></td>
 
-          <td><input type="submit" id="' . $row['id'] . '" class="button" name="ok" value="ok" onclick="validate(' . $row['id'] . ')">';
+          <td><input type="submit" id="' . $row['id'] . '" class="button" name="ok" value="ok" onclick="validate(' . $row['id'] . ',\'ok\')">';
 
 
 
           echo
 
-          '<input type="submit" id="' . $row['id'] . '" class="button" name="delete" value="delete" onclick="validate(' . $row['id'] . ',\'delete\')"></td></tr>';
+          '<input type="submit" id="' . $row['id'] . '" class="button" name="delete" value="delete" onclick="validate(' . $row['id'] . ',\'delete\')"></td>
+          
+          <td>' . $row['validation'] . '</td></tr>';
 
         }
 
@@ -101,7 +101,9 @@ $result = mysqli_query($conn, $sql);
       echo '0 results';
 
     }
-
+    
+    include 'php/db_closeCon.php';
+    
     ?>
 
   <script src="js/main.js">
