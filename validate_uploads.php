@@ -22,11 +22,11 @@ $result = mysqli_query($conn, $sql);
 
     <meta charset="utf-8">
 
-    <title>Upload your art</title>
+    <title>Verify Art</title>
 
     <meta name="description" content="THEARTDEPARTMENT">
 
-    <meta name="author" content="SitePoint">
+    <meta name="Coen" content="">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
