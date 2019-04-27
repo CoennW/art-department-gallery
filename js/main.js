@@ -1,7 +1,7 @@
 
 
 function validate(id, value) {
-    
+    console.log(value);
     var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
@@ -11,6 +11,4 @@ function validate(id, value) {
         xmlhttp.open("GET", "php/validate_delete.php?q=" + id, true);
         xmlhttp.send();
 }
-
-
 
