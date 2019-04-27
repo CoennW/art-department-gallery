@@ -27,8 +27,9 @@ $result = mysqli_query($conn, $sql);
     <meta name="description" content="THEARTDEPARTMENT">
 
     <meta name="author" content="SitePoint">
-
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
 
 </head>
 
@@ -106,12 +107,8 @@ $result = mysqli_query($conn, $sql);
     
     ?>
 
-  <script src="js/main.js">
-
-
-
-  </script>
-
+  
+<script src="js/main.js"></script>
 </body>
 
 </html>
