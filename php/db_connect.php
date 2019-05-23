@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "theartdepartment_gallery";
+$username = "coenwrq206_db";
+$password = "artdepartment";
+$dbname = "coenwrq206_picklesenmayo";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
